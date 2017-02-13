@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 	
 	<!--CSS-->
   	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
@@ -13,6 +13,8 @@
 	
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
 
 	<!--JS-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -24,6 +26,9 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="logo">
+				Billigast på blocket!
+			</div>
 			<div class="body-element">
 				<div class="text-input">
 					<div class="margin-bottom">
@@ -33,14 +38,19 @@
 					<p class="element-text">
 						Sök på den produkt du vill veta genomsnittspriset på.
 					</p>
-					<input id="searchTerm" type="text">
-					{% csrf_token %}
-					<input onclick="submitSearch()" type="submit" value="Sök">
+					<div class="mobile-center">
+						<input id="searchTerm" type="text">
+						{% csrf_token %}
+						<input onclick="submitSearch()" type="submit" value="Sök">
+					</div>
 				</div>
 				<div id="results" class="result">
 					Det genomsnittliga priset för <span id="result"></span> är:
 					<span id="result-text">
 					</span>
+				</div>
+				<div id="error">
+					Vi hittade tyvärr ingen sån produkt!
 				</div>
 			</div>
   		</div>

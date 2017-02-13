@@ -9,9 +9,16 @@ function submitSearch(){
       cache: false,
       success: function(data){
       	  data = JSON.parse(data);
-      	  $('#results').show();
-          $('#result').text(data.search);
-          $('#result-text').text(data.answer+"kr");
+      	  if(data.errorResult == 'no-result'){
+  	      	$('#results').hide();
+      	  	$('#error').show();
+      	  }
+      	  else{
+      	 	 $('#results').show();
+          	$('#result').text(data.search);
+          	$('#result-text').text(data.answer+"kr");
+          	$('#error').hide();
+      	  }
       }
     })
 }

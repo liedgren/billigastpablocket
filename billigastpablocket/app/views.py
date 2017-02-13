@@ -13,7 +13,7 @@ def getSearch(request):
 	items = []
 	objects = Listing.objects.filter(name__contains=searchTerm)
 	if objects.count() == 0:
-		response = '{"error": "no-result"}'
+		response = '{"errorResult" : "no-result"}'
 		bytes = JsonResponse(response, safe=False)
 		return HttpResponse(bytes, content_type='application/json')
 
