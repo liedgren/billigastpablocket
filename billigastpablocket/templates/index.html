@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--CSS-->
+  	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/static/js/scripts.js"></script>
+
+	<title>
+		Billigastpablocket
+	</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="body-element">
+				<div class="text-input">
+					<div class="margin-bottom">
+						<h2 class="element-text">Sälj för rätt pris</h2>
+						<p class="element-text">Vi hjälper dig att hitta ett bra pris för att sälja dina begagnade prylar! Vi tar med hjälp av data fram det nuvarande genomsnittspriset på alla produkter till salu på nätet.</p>
+					</div>
+					<p class="element-text">
+						Sök på den produkt du vill veta genomsnittspriset på.
+					</p>
+					<input id="searchTerm" type="text">
+					{% csrf_token %}
+					<input onclick="submitSearch()" type="submit" value="Sök">
+				</div>
+				<div id="results" class="result">
+					Det genomsnittliga priset för <span id="result"></span> är:
+					<span id="result-text">
+					</span>
+				</div>
+			</div>
+    		<div class="push"></div>
+  		</div>
+ 		<footer class="footer"></footer>
+	</body>
+</html>
