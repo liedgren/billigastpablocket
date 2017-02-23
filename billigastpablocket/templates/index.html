@@ -33,21 +33,33 @@
 				<div class="text-input">
 					<div class="margin-bottom">
 						<h2 class="element-text">Sälj för rätt pris</h2>
-						<p class="element-text">Vi hjälper dig att hitta ett bra pris för att sälja dina begagnade prylar! Vi tar med hjälp av data fram det nuvarande genomsnittspriset på alla produkter till salu på nätet.</p>
+						<p class="element-text">Vi hjälper dig att hitta ett bra pris för att sälja dina begagnade prylar! Vi tar med hjälp av data fram det högsta, lägsta och genomsnittspriset på alla produkter till salu på blocket.se.</p>
 					</div>
 					<p class="element-text">
-						Sök på den produkt du vill veta genomsnittspriset på.
+						Sök på den produkt du vill veta prisnivå på:
 					</p>
 					<div class="mobile-center">
-						<input id="searchTerm" type="text">
+						<input id="searchTerm" type="text" placeholder="Ex. Volvo V70...">
 						{% csrf_token %}
 						<input onclick="submitSearch()" type="submit" value="Sök">
 					</div>
 				</div>
 				<div id="results" class="result">
-					Det genomsnittliga priset för <span id="result"></span> är:
-					<span id="result-text">
-					</span>
+					<div class="result-row">
+						<img src="https://maxcdn.icons8.com/Android/PNG/24/Shopping/cheap-24.png" title="Cheap" width="24">
+						<span class="result-text" id="result-text-1">
+						</span>
+					</div>
+					<div class="result-row">
+						<img src="https://maxcdn.icons8.com/Android/PNG/24/Shopping/average-24.png" title="Average" width="24">
+						<span class="result-text" id="result-text-2">
+						</span>
+					</div>
+					<div class="result-row">
+						<img src="https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/expensive-24.png" title="Expensive" width="24">
+						<span class="result-text" id="result-text-3">
+						</span>
+					</div>
 				</div>
 				<div id="error">
 					Vi hittade tyvärr ingen sån produkt!

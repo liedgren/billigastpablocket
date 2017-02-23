@@ -20,10 +20,10 @@ html, body {
 
 }
 .body-element{
-	border: 1px solid #e9e9e9;
+	//border: 1px solid #e9e9e9;
 	width: 70%;
 	padding-bottom: 150px;
-	background-color: #ffffff;
+	background-color: #f9f7f6;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
@@ -99,16 +99,19 @@ h2{
 	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
 }
-#result-text{
+.result-text{
 	text-align: center;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px !important;
-	font-size: 30px;
+	margin-top: 10px !important;
+	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
-	display: block;
-	margin-bottom: -100px;
+}
+.result-row{
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
 }
 
 /* For mobile : like samsung grand(480 * 800): */
@@ -140,7 +143,12 @@ h2{
 		margin-top: 10px;
 	}
 	.result{
-		margin-top: 150px;
+		margin-top: 50px;
+	}
+	.result-row{
+		margin-right: 0px;
+		margin-top: 20px;
+		display: block;
 	}
 	#error{
 		margin-top: 150px;

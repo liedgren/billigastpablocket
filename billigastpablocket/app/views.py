@@ -42,8 +42,11 @@ def getSearch(request):
 
 	for obj in objects:
 		items.append(obj.price)
-	answer = median(items)
-	response = '{"search":"'+searchTerm+'", "answer":"'+str(answer)+'"}'
+	medv = median(items)
+	minv = min(float(s) for s in items)
+	maxv = max(float(s) for s in items)
+
+	response = '{"search":"'+searchTerm+'", "med":"'+str(medv)+'", "min":"'+str(minv)+'", "max":"'+str(maxv)+'"}'
 	bytes = JsonResponse(response, safe=False)
 	return HttpResponse(bytes, content_type='application/json')
 

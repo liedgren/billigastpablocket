@@ -15,8 +15,10 @@ function submitSearch(){
       	  }
       	  else{
       	 	 $('#results').show();
-          	$('#result').text(data.search);
-          	$('#result-text').text(data.answer+"kr");
+          	//$('#result').text(data.search);
+            $('#result-text-1').text(data.min+"kr");
+          	$('#result-text-2').text(data.med+"kr");
+            $('#result-text-3').text(data.max+"kr");
           	$('#error').hide();
       	  }
       }
